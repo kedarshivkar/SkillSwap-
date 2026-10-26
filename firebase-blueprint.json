@@ -1,0 +1,140 @@
+{
+  "entities": {
+    "users": {
+      "title": "users",
+      "description": "SkillSwap members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "city": { "type": "string" },
+        "photo": { "type": "string" },
+        "rating": { "type": "number" },
+        "totalReviews": { "type": "number" },
+        "bio": { "type": "string" },
+        "languages": { "type": "array", "items": { "type": "string" } },
+        "availability": { "type": "string" },
+        "experienceLevel": { "type": "string" },
+        "mode": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "isAdmin": { "type": "boolean" },
+        "isReportedFake": { "type": "boolean" },
+        "teachSkills": { "type": "array" },
+        "learnSkills": { "type": "array" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "email"]
+    },
+    "swapRequests": {
+      "title": "swapRequests",
+      "description": "Skill exchange requests between members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "senderId": { "type": "string" },
+        "receiverId": { "type": "string" },
+        "teachSkill": { "type": "string" },
+        "learnSkill": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "senderId", "receiverId"]
+    },
+    "chatMessages": {
+      "title": "chatMessages",
+      "description": "Direct chat messages for exchange partners",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "swapRequestId": { "type": "string" },
+        "senderId": { "type": "string" },
+        "receiverId": { "type": "string" },
+        "message": { "type": "string" },
+        "time": { "type": "string" },
+        "isRead": { "type": "boolean" }
+      },
+      "required": ["id", "swapRequestId", "senderId"]
+    },
+    "sessions": {
+      "title": "sessions",
+      "description": "Scheduled skill swap sessions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "swapRequestId": { "type": "string" },
+        "teacherId": { "type": "string" },
+        "learnerId": { "type": "string" },
+        "skillName": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "teacherId", "learnerId"]
+    },
+    "reviews": {
+      "title": "reviews",
+      "description": "Session ratings and feedback",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reviewerId": { "type": "string" },
+        "receiverId": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "skillName": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "reviewerId", "receiverId"]
+    },
+    "certificates": {
+      "title": "certificates",
+      "description": "Verified swap certificates",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "teacherName": { "type": "string" },
+        "skillName": { "type": "string" },
+        "issueDate": { "type": "string" },
+        "certificateCode": { "type": "string" }
+      },
+      "required": ["id", "userId"]
+    },
+    "notifications": {
+      "title": "notifications",
+      "description": "User notifications",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "date": { "type": "string" },
+        "read": { "type": "boolean" }
+      },
+      "required": ["id", "userId"]
+    },
+    "problemReports": {
+      "title": "problemReports",
+      "description": "User submitted problem reports for admin investigation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reporterId": { "type": "string" },
+        "reporterName": { "type": "string" },
+        "reporterEmail": { "type": "string" },
+        "reportedUserId": { "type": "string" },
+        "reportedUserName": { "type": "string" },
+        "category": { "type": "string" },
+        "priority": { "type": "string" },
+        "description": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "reporterId", "description"]
+    }
+  }
+}

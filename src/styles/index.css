@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cork: #FFFFFF;
+    --cork-light: #F8FAFC;
+    --paper: #FFFFFF;
+    --paper-dark: #F1F5F9;
+    --ink: #0F172A;
+    --gold: #2563EB; /* Royal Blue from reference */
+    --gold-hover: #1D4ED8;
+    --teal: #2563EB;
+    --string: #38BDF8;
+    --cream-text: #0F172A;
+    --slate-subtle: #64748B;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p {
+    color: #1E293B;
+    font-weight: 500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 750;
+    color: #0F172A;
+    letter-spacing: -0.02em;
+  }
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom theme utilities */
+.bg-cork { background-color: #FFFFFF; }
+.bg-cork-light { background-color: #F8FAFC; }
+.bg-paper { background-color: #FFFFFF; color: #0F172A; }
+.bg-paper-dark { background-color: #F1F5F9; color: #0F172A; }
+
+.text-cream { color: #0F172A; }
+.text-ink { color: #0F172A; font-weight: 700; }
+.text-gold { color: #2563EB; }
+.text-teal { color: #2563EB; }
+.text-string { color: #38BDF8; }
+
+.border-cork-border { border-color: #E2E8F0; }
+
+.cork-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+}
+
+.paper-card {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 1.25rem;
+}
+
+.paper-card h1, .paper-card h2, .paper-card h3, .paper-card h4 {
+  color: #0F172A;
+  font-weight: 800;
+}
+
+.paper-card p, .paper-card span, .paper-card div {
+  color: #475569;
+}
+
+.btn-gold {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gold:hover {
+  transform: translateY(-1px);
+  background-color: #1D4ED8;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.35);
+}
+
+.btn-teal {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-teal:hover {
+  transform: translateY(-1px);
+  background-color: #1D4ED8;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.35);
+}
+
+.btn-cork-ghost {
+  background-color: #FFFFFF;
+  color: #2563EB;
+  font-weight: 600;
+  border: 1px solid #2563EB;
+}
+
+.btn-cork-ghost:hover {
+  border-color: #1D4ED8;
+  color: #1D4ED8;
+  background-color: #EFF6FF;
+}

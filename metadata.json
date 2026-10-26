@@ -1,0 +1,6 @@
+{
+  "name": "SkillSwap - Skill Exchange Platform",
+  "description": "A peer-to-peer skill exchange platform matching teachers and learners without money.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
